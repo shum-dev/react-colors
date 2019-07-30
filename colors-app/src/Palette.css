@@ -6,33 +6,3 @@
   height: 90%;
 }
 
-.slider {
-  border: 1px solid black;
-  width: 340px;
-  padding: 5px;
-  margin: 5px 50px;
-  display: inline-block;
-}
-
-.rc-slider-track {
-  background-color:transparent;
-}
-
-.rc-slider-rail {
-  height: 8px;
-  border: 1px solid black;
-  /* margin: 10px; */
-}
-
-.rc-slider-handle:hover,
-.rc-slider-handle:focus,
-.rc-slider-handle:active,
-.rc-slider-handle {
-  background-color: green;
-  outline: none;
-  border: 2px solid green;
-  box-shadow: none;
-  width: 13px;
-  height: 13px;
-  margin-top: -3px;
-}
