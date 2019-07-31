@@ -14,7 +14,7 @@ class App extends Component {
   render(){
     return (
       <Switch>
-        <Route exact path='/' render={() => <PaletteList palettes={seedColors}/>}/>
+        <Route exact path='/' render={(routeProps) => <PaletteList {...routeProps} palettes={seedColors}/>}/>
         <Route exact path='/palette/:id' render={this.findPalette}/>
         <Route render={() => <h1>NOT FOUND</h1>}/>
       </Switch>
