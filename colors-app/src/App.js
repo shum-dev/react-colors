@@ -18,10 +18,6 @@ class App extends Component {
         <Route exact path='/palette/:id' render={this.findPalette}/>
         <Route render={() => <h1>NOT FOUND</h1>}/>
       </Switch>
-
-      // <div>
-      //   <Palette palette={generatePalette(seedColors[4])}/>
-      // </div>
     );
   }
 
