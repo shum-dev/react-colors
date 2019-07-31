@@ -7,6 +7,7 @@
   cursor: pointer;
   margin-bottom: -4px;
 }
+
 .SingleColorPalette .ColorBox {
   height: 40%;
 }
@@ -61,11 +62,11 @@
 .light-text {
   color: white;
 }
-.ColorBox .dark-text {
+/* .ColorBox .dark-text {
   color: rgba(0,0,0,0.7);
-}
+} */
 
-.see-more {
+/* .see-more {
   background: rgba(255, 255, 255, .3);
   position: absolute;
   border: none;
@@ -77,7 +78,7 @@
   text-align: center;
   line-height: 30px;
   text-transform: uppercase;
-}
+} */
 
 
 .copy-overlay {
