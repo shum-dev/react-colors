@@ -1,7 +1,7 @@
 .Palette {
   height: 100vh;
-  /* display: flex;
-  flex-direction: column; */
+  display: flex;
+  flex-direction: column;
 }
 
 .Palette-colors {
