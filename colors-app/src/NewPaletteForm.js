@@ -83,7 +83,8 @@ class NewPaletteForm extends Component {
       open: true,
       currentColor: 'teal',
       colors: [],
-      newName: ''
+      newColorName: '',
+      newPaletteName: ''
     }
   }
   componentDidMount() {
@@ -95,6 +96,11 @@ class NewPaletteForm extends Component {
     ValidatorForm.addValidationRule('isColorUnique', (value) => (
       this.state.colors.every(
         ({color}) => color !== this.state.currentColor
+      )
+    ));
+    ValidatorForm.addValidationRule('isPaletteNameUnique', (value) => (
+      this.props.palettes.every(
+        ({paletteName}) => paletteName.toLowerCase() !== value.toLowerCase()
       )
     ));
   };
@@ -111,18 +117,18 @@ class NewPaletteForm extends Component {
   addNewColor = () => {
     const newColor = {
       color: this.state.currentColor,
-      name: this.state.newName
+      name: this.state.newColorName
     };
     this.setState({
       colors: [...this.state.colors, newColor],
-      newName: ''
+      newColorName: ''
     })
   };
   handleChange = (e) => {
-    this.setState({newName: e.target.value});
+    this.setState({[e.target.name]: e.target.value});
   };
   handleSubmit = () => {
-    let newName='New test Palette'
+    let newName= this.state.newPaletteName;
     const newPalette = {
       paletteName: newName,
       id: newName.toLowerCase().replace(/ /g, '-'),
@@ -147,31 +153,37 @@ class NewPaletteForm extends Component {
           })}
         >
           <Toolbar disableGutters={!open}>
-            <IconButton
-              color="inherit"
-              aria-label="Open drawer"
-              onClick={this.handleDrawerOpen}
-              className={classNames(classes.menuButton, open && classes.hide)}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" color="inherit" noWrap>
-              Persistent drawer
-            </Typography>
-            <Button
-              variant='contained'
-              color='primary'
-              onClick={this.handleSubmit}
-            >
-                Save Palette
-            </Button>
-            <Button
-              variant='contained'
-              color='secondary'
-              onClick={this.savePalette}
-            >
-                Save Palette
-            </Button>
+              <IconButton
+                color="inherit"
+                aria-label="Open drawer"
+                onClick={this.handleDrawerOpen}
+                className={classNames(classes.menuButton, open && classes.hide)}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Typography variant="h6" color="inherit" noWrap>
+                Persistent drawer
+              </Typography>
+            <div>
+              <ValidatorForm onSubmit={this.handleSubmit}>
+                <TextValidator
+                  name='newPaletteName'
+                  label='Palette Name'
+                  value={this.state.newPaletteName}
+                  onChange={this.handleChange}
+                  validators={['required', 'isPaletteNameUnique', 'isPaletteUnique']}
+                  errorMessages={['Palette name is required', 'Palette name must be unique', 'Palette already exists!']}
+                />
+                <Button
+                  variant='contained'
+                  color='primary'
+                  type='submit'
+                >
+                    Save Palette
+                </Button>
+              </ValidatorForm>
+            </div>
+
           </Toolbar>
         </AppBar>
         <Drawer
@@ -204,7 +216,8 @@ class NewPaletteForm extends Component {
           />
           <ValidatorForm onSubmit={this.addNewColor}>
             <TextValidator
-              value={this.state.newName}
+              name='newColorName'
+              value={this.state.newColorName}
               onChange={this.handleChange}
               validators={['required', 'isColorNameUnique', 'isColorUnique']}
               errorMessages={['Color name is required', 'Color name must be unique', 'Color already used!']}
