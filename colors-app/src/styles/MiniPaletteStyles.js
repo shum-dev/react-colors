@@ -1,18 +1,19 @@
 export default {
   root: {
+    height: '100%',
     backgroundColor: 'white',
     border: '1px solid black',
     borderRadius: '5px',
     padding: '0.5rem',
     position: 'relative',
-    overflow: 'hidden',
+    // overflow: 'hidden',
     '&:hover': {
       cursor: 'pointer'
     }
   },
   colors: {
     backgroundColor: 'black',
-    height: '150px',
+    height: '70%',
     width: '100%',
     borderRadius: '5px',
     overflow: 'hidden'

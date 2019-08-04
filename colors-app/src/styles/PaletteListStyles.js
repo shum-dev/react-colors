@@ -7,12 +7,13 @@ export default {
     justifyContent: 'center'
   },
   container: {
+    height: '100%',
     width: '50%',
     display: 'flex',
     alignItems: 'flex-start',
     flexDirection: 'column',
     flexWrap: 'wrap',
-    // border: '1px solid black'
+    border: '1px solid black'
   },
   nav: {
     color: 'white',
