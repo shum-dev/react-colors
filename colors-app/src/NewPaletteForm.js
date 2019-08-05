@@ -19,9 +19,15 @@ class NewPaletteForm extends Component {
   }
   constructor(props) {
     super(props);
+    let starterColors;
+    try{
+      starterColors = this.props.palettes[0].colors;
+    } catch(e){
+      starterColors = [];
+    }
     this.state = {
       open: true,
-      colors: this.props.palettes[0].colors,
+      colors: starterColors,
     }
   }
   handleDrawerOpen = () => {
