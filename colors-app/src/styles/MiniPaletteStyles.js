@@ -3,12 +3,10 @@ export default {
     boxSizing: 'border-box',
     height: '200px',
     backgroundColor: 'white',
-    // border: '1px solid red',
     borderRadius: '5px',
     padding: '0.5rem',
     position: 'relative',
     cursor: 'pointer',
-    // overflow: 'hidden',
     '&:hover svg': {
       opacity: '1'
     },
