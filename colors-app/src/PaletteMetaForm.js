@@ -63,6 +63,7 @@ class PaletteMetaForm extends Component {
                 label='Palette Name'
                 value={newPaletteName}
                 fullWidth
+                autoFocus
                 onChange={this.handleChange}
                 validators={['required', 'isPaletteNameUnique']}
                 errorMessages={['Palette name is required', 'Palette name must be unique']}

@@ -10,21 +10,24 @@ import NewPaletteForm from './NewPaletteForm';
 class App extends Component {
   constructor(props) {
     super(props);
+    const savedPalettes = JSON.parse(window.localStorage.getItem('palettes')) || seedColors;
     this.state = {
-      palettes: seedColors
+      palettes: savedPalettes
     }
     this.savePalette = this.savePalette.bind(this);
     this.findPalette = this.findPalette.bind(this);
-  }
+  };
   findPalette(id) {
     const aimPalette = this.state.palettes.find(palette => palette.id === id);
     const extendedPalette = generatePalette(aimPalette);
     return extendedPalette;
-  }
+  };
   savePalette(newPalette) {
-    this.setState({palettes: [...this.state.palettes, newPalette]});
-  }
-
+    this.setState({palettes: [...this.state.palettes, newPalette]}, this.syncLocalStorage);
+  };
+  syncLocalStorage = () => {
+    window.localStorage.setItem('palettes', JSON.stringify(this.state.palettes));
+  };
   render(){
     return (
       <Switch>
