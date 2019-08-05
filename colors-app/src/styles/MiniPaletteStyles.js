@@ -1,8 +1,9 @@
 export default {
   root: {
-    height: '100%',
+    boxSizing: 'border-box',
+    height: '200px',
     backgroundColor: 'white',
-    border: '1px solid black',
+    // border: '1px solid red',
     borderRadius: '5px',
     padding: '0.5rem',
     position: 'relative',
@@ -14,7 +15,7 @@ export default {
   },
   colors: {
     backgroundColor: 'black',
-    height: '70%',
+    height: '80%',
     width: '100%',
     borderRadius: '5px',
     overflow: 'hidden'
