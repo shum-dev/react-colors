@@ -25,7 +25,7 @@ class ColorBox extends Component {
         text={background}
         onCopy={this.changeCopyState}>
         <div className={classes.ColorBox} style={{background}}>
-          {/* separate div for aoverlay animation effect */}
+          {/* separate div for a overlay animation effect */}
           <div
             style={{background}}
             className={`${classes.copyOverlay} ${copied && classes.showOverlay}`}
