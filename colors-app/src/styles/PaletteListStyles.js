@@ -1,11 +1,15 @@
 import sizes from './sizes';
+import bg from './Dalmatian-Spots.svg'
 export default {
   root: {
-    backgroundColor: 'blue',
+    backgroundColor: '#fff',
+    backgroundImage: `url(${bg})`,
+    /* background by SVGBackgrounds.com */
     height: '100%',
     display: 'flex',
     alignItems: 'flex-start',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    overflow: 'scroll'
   },
   container: {
     position: 'relative',
@@ -13,7 +17,6 @@ export default {
     width: '50%',
     display: 'flex',
     alignItems: 'center',
-    // justifyContent: 'center',
     flexDirection: 'column',
     flexWrap: 'wrap',
     border: '1px solid black',
@@ -52,5 +55,8 @@ export default {
       gridTemplateColumns: 'repeat(1, 100%)',
       gridGap: '1rem',
     }
+  },
+  heading: {
+    fontSize: '2rem'
   }
 };
