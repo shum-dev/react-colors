@@ -14,11 +14,11 @@ export default {
     },
     [sizes.down('lg')]: {
       width: '25%',
-      height: props => props.singleColorPalette ? '40%' : '20%',
+      height: props => props.singleColorPalette ? '33.333%' : '20%',
     },
     [sizes.down('md')]: {
       width: '50%',
-      height: props => props.singleColorPalette ? '40%' : '10%',
+      height: props => props.singleColorPalette ? '20%' : '10%',
     },
     [sizes.down('xs')]: {
       width: '100%',
