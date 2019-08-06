@@ -75,7 +75,9 @@ export default {
     }
   },
   heading: {
-    color: '#f7f7f7',
+    background: 'linear-gradient(to right, #feac5e, #c779d0, #4bc0c8)',
+    '-webkit-background-clip': 'text',
+    '-webkit-text-fill-color': 'transparent',
     fontSize: '2rem'
   }
 };
