@@ -23,7 +23,6 @@ const styles = theme => ({
     justifyContent: 'flex-end',
   },
   content: {
-    border: '1px solid black',
     height: 'calc(100vh - 64px)',
     flexGrow: 1,
     padding: '0',

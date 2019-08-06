@@ -1,5 +1,5 @@
 import sizes from './sizes';
-import bg from './Dalmatian-Spots.svg'
+import bg from './Dalmatian-Spots_2.svg'
 export default {
   '@global': {
     '.fade-exit': {
@@ -22,13 +22,12 @@ export default {
   },
   container: {
     position: 'relative',
-    height: '100%',
+    height: '100vh',
     width: '50%',
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column',
     flexWrap: 'wrap',
-    border: '1px solid black',
     [sizes.down('xl')]: {
       width: '60%'
     },
@@ -46,7 +45,8 @@ export default {
     justifyContent: 'space-between',
     alignItems: 'center',
     '& a': {
-      color: 'white',
+      color: 'black',
+
     }
   },
   palettes: {
@@ -66,6 +66,7 @@ export default {
     }
   },
   heading: {
+    color: '#494747',
     fontSize: '2rem'
   }
 };
