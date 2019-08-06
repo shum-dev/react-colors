@@ -67,8 +67,6 @@ class NewPaletteForm extends Component {
     while(exist !== undefined){
       rand = Math.floor(Math.random()*allColors.length);
       exist = this.state.colors.find(item => item.name === allColors[rand].name);
-      console.log(allColors[rand]);
-      console.log(this.state.colors);
     }
     this.setState({
       colors: [...this.state.colors, allColors[rand]]

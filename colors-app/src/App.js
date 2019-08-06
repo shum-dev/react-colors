@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import NewPaletteForm from './NewPaletteForm';
 import Palette from './Palette';
@@ -78,25 +78,45 @@ class App extends Component {
               <Route
                 exact
                 path='/palette/:id'
-                render={(routeProps) => (
-                  <Page>
-                    <Palette
-                      palette={this.findPalette(routeProps.match.params.id)}
-                    />
-                  </Page>
-                )}
+                render={(routeProps) => {
+                  let currPalette;
+                  try {
+                    currPalette = this.findPalette(routeProps.match.params.id);
+                  } catch(e) {
+                    return <Redirect to='/'/>
+                  }
+                  return (
+                    <Page>
+                      <Palette
+                        palette={currPalette}
+                      />
+                    </Page>
+                  )
+                }}
               />
               <Route
                 exact
                 path='/palette/:paletteId/:colorId'
-                render={(routeProps)=> (
-                  <Page>
-                  <SingleColorPalette
-                    palette={this.findPalette(routeProps.match.params.paletteId)}
-                    colorId={routeProps.match.params.colorId}
-                  />
-                  </Page>
-                )}
+                render={(routeProps)=> {
+                  let currPalette;
+                  let currId = routeProps.match.params.colorId;
+                  try {
+                    currPalette = this.findPalette(routeProps.match.params.paletteId);
+                  } catch(e) {
+                    return <Redirect to='/'/>
+                  }
+                  if(!currPalette.colors[50].find(item => item.id === currId)){
+                    return <Redirect to='/'/>
+                  }
+                  return (
+                    <Page>
+                    <SingleColorPalette
+                      palette={currPalette}
+                      colorId={currId}
+                    />
+                    </Page>
+                  )
+                }}
               />
               <Route render={() => <h1>NOT FOUND</h1>}/>
             </Switch>
