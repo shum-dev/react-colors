@@ -14,7 +14,7 @@ export default {
     backgroundColor: '#fff',
     backgroundImage: `url(${bg})`,
     /* background by SVGBackgrounds.com */
-    height: '100%',
+    height: '100vh',
     display: 'flex',
     alignItems: 'flex-start',
     justifyContent: 'center',
