@@ -50,7 +50,7 @@ class ColorPickerForm extends Component {
             onChangeComplete={this.updateCurrentColor}
             className={classes.picker}
           />
-          <ValidatorForm onSubmit={this.handleSubmit}>
+          <ValidatorForm onSubmit={this.handleSubmit} instantValidate={false}>
             <TextValidator
               className={classes.colorNameInput}
               name='newColorName'
@@ -71,11 +71,10 @@ class ColorPickerForm extends Component {
               disabled={paletteIsFull}
             >
               {paletteIsFull ? 'palette full' : 'Add Color'}
-
             </Button>
           </ValidatorForm>
       </div>
-    )
+    );
   }
 }
 

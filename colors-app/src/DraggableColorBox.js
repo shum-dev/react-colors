@@ -17,7 +17,6 @@ const DraggableColorBox = ({classes, color, name, handleDelete}) => {
           onClick={handleDelete}
         />
       </div>
-
     </div>
   )
 }

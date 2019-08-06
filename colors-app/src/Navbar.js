@@ -8,7 +8,6 @@ import CloseIcon from '@material-ui/icons/Close';
 import IconButton from '@material-ui/core/IconButton';
 import Slide from '@material-ui/core/Slide';
 import Slider from 'rc-slider';
-
 import styles from './styles/NavbarStyles';
 import 'rc-slider/assets/index.css';
 
@@ -26,7 +25,6 @@ class Navbar extends Component {
     this.handleFormatChange = this.handleFormatChange.bind(this);
     this.closeSnackbar = this.closeSnackbar.bind(this);
   }
-
   handleFormatChange = Transition => (e) => {
     this.setState({ format: e.target.value, open: true, Transition}, () => this.props.handleChange(this.state.format));
   }
@@ -77,7 +75,7 @@ class Navbar extends Component {
           message={<span id='message-id'>Format Changed To {this.state.format.toUpperCase()}</span>}
         />
       </header>
-    )
+    );
   }
 }
 

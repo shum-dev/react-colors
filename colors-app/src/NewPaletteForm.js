@@ -12,6 +12,7 @@ import Button from '@material-ui/core/Button';
 import DraggableColorList from './DraggableColorList';
 import arrayMove from 'array-move';
 import styles from './styles/NewPaletteFormStyle';
+import seedColors from './seedColors';
 
 class NewPaletteForm extends Component {
   static defaultProps = {
@@ -19,15 +20,9 @@ class NewPaletteForm extends Component {
   }
   constructor(props) {
     super(props);
-    let starterColors;
-    try{
-      starterColors = this.props.palettes[0].colors;
-    } catch(e){
-      starterColors = [];
-    }
     this.state = {
       open: true,
-      colors: starterColors,
+      colors: seedColors[0].colors,
     }
   }
   handleDrawerOpen = () => {
@@ -66,8 +61,15 @@ class NewPaletteForm extends Component {
     this.setState({colors: []});
   }
   randomColor = () => {
-    const allColors = this.props.palettes.map(item => item.colors).flat();
-    const rand = Math.floor(Math.random()*allColors.length);
+    const allColors = seedColors.map(item => item.colors).flat();
+    let rand = Math.floor(Math.random()*allColors.length);
+    let exist = this.state.colors.find(item => item.name === allColors[rand].name);
+    while(exist !== undefined){
+      rand = Math.floor(Math.random()*allColors.length);
+      exist = this.state.colors.find(item => item.name === allColors[rand].name);
+      console.log(allColors[rand]);
+      console.log(this.state.colors);
+    }
     this.setState({
       colors: [...this.state.colors, allColors[rand]]
     })
@@ -76,7 +78,6 @@ class NewPaletteForm extends Component {
     const { classes, maxColors, palettes} = this.props;
     const { open, colors } = this.state;
     const paletteIsFull = colors.length >= maxColors;
-
     return (
       <div className={classes.root}>
         <PaletteFormNav
@@ -124,7 +125,7 @@ class NewPaletteForm extends Component {
             <ColorPickerForm
               paletteIsFull={paletteIsFull}
               addNewColor={this.addNewColor}
-              colors={this.state.colors}
+              colors={colors}
             />
           </div>
         </Drawer>

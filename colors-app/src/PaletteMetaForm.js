@@ -58,7 +58,6 @@ class PaletteMetaForm extends Component {
               <DialogContentText>
                 Please enter a name for your new beautiful palette.
               </DialogContentText>
-
               <TextValidator
                 name='newPaletteName'
                 label='Palette Name'

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { withStyles } from '@material-ui/styles';
+import PaletteFooter from './PaletteFooter';
 import ColorBox from './ColorBox';
 import Navbar from './Navbar';
 import styles from './styles/PaletteStyles';
-import { withStyles } from '@material-ui/styles';
-import PaletteFooter from './PaletteFooter';
 
 class SingleColorPalette extends Component {
   constructor(props) {
@@ -44,7 +44,7 @@ class SingleColorPalette extends Component {
         </div>
         <PaletteFooter paletteName={paletteName} emoji={emoji}/>
       </div>
-    )
+    );
   }
 }
 export default withStyles(styles)(SingleColorPalette);

@@ -45,8 +45,17 @@ export default {
     justifyContent: 'space-between',
     alignItems: 'center',
     '& a': {
+      display: 'flex',
       color: 'black',
-
+      alignItems: 'center',
+      justifyContent: 'center',
+      '& svg': {
+        marginLeft: '5px',
+        transition: "all .2s ease-in",
+      },
+    '&:hover svg': {
+      transform: 'scale(1.3)'
+    },
     }
   },
   palettes: {
@@ -66,7 +75,7 @@ export default {
     }
   },
   heading: {
-    color: '#494747',
+    color: '#f7f7f7',
     fontSize: '2rem'
   }
 };

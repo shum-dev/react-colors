@@ -81,7 +81,7 @@ class PaletteFormNav extends Component {
               />
         }
       </div>
-    )
+    );
   }
 }
 
