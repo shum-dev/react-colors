@@ -1,5 +1,5 @@
 import sizes from './sizes';
-import bg from './Dalmatian-Spots_2.svg'
+import bg from './Dalmatian-Spots_3.svg'
 export default {
   '@global': {
     '.fade-exit': {
@@ -46,7 +46,7 @@ export default {
     alignItems: 'center',
     '& a': {
       display: 'flex',
-      color: 'black',
+      color: '#F7873F',
       alignItems: 'center',
       justifyContent: 'center',
       '& svg': {
