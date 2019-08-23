@@ -2,41 +2,52 @@
 React-colors - is a project with ...
 Nice and responsive
 
-# Main Features
+# Features
 
 ### Main page
+Actions:  
+* Delete color palettes  
+* Create own color palettes  
+* View a certain palette  
+
+![](colors-app/images/PalettsList.jpg)
+
+
+
+### New Palette Form
+Actions:
+* Create own color using Color Picker
+* Re-order Colors By Drag&Drop
+* Get Random Colors
+* Delete Colors
+* Save whole palette
 
 ![](colors-app/images/NewPaletteForm.jpg)
 
-Delete color palettes
-Create own color palettes
-View a certain palette
+> Also there are bunch of Validations here: color value, color name, max number of colors, palette name.
 
-## New Palette
-Create own color using Color Picker
-Re-order Colors By Drag&Drop
-Get Random Colors
-Delete Colors
-Save palette
-Validations: color value, color name, max number of colors, palette name.
+### Certain Palette
+Actions:
+* Copy colors to clipboard
+* Chenge color format (HEX, RGB, RGBA)
+* Change Lightness(shades) of Color 
+* View all shades of certain color
 
-## Certain Palette
-copy colors to clipboard
-Chenge color format (HEX, RGB, RGBA)
-Change Color lightness(shades)
+![](colors-app/images/CertainPalette.jpg)
 
-view all shades of selected color
+### Certain Color Shades
+Actions:
+* Copy colors to clipboard
+* Chenge color format (HEX, RGB, RGBA)
 
+![](colors-app/images/CertainColor.jpg)
 
 ## Goal
 I did it so that I could learn enough about authentication and authorization with JWT tokens, mastering the Redux concepts, localStorage, async API call and others...
 
 ## Tech Stack & Technologies
  * React
- * Redux
- * Node.js
- * Express
- * JWT + bcrypt
- * Heroku
-localStorage
-JSS
+ * Material UI
+ * JSS
+ * chroma.js
+And othe libraries to implement: Drag&Drop, Copy to Clipboard, Form Validation, Color Picker, Emoji Picker and more ...
