@@ -42,9 +42,6 @@ Here you can:
 
 ![](colors-app/images/CertainColor.jpg)
 
-## Goal
-I did it so that I could learn enough about authentication and authorization with JWT tokens, mastering the Redux concepts, localStorage, async API call and others...
-
 ## Tech Stack & Technologies
  * React
  * Material UI
