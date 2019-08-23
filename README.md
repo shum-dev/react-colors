@@ -1,6 +1,6 @@
-# react-colors
-React-colors - is a project with ...
-Nice and responsive
+# React-Colors
+React-colors - is a nice and responsive application that lets you create and manage colour palettes or browse some of the default ones. The app helps you create RGB or HEX colors using color picker, adjust shades, copy it to clipboard and so on...
+
 
 # Features
 
@@ -49,5 +49,6 @@ I did it so that I could learn enough about authentication and authorization wit
  * React
  * Material UI
  * JSS
- * chroma.js
+ * chroma.js  
+ 
 And othe libraries to implement: Drag&Drop, Copy to Clipboard, Form Validation, Color Picker, Emoji Picker and more ...
