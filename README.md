@@ -5,7 +5,7 @@ Nice and responsive
 # Features
 
 ### Main page
-Actions:  
+Here you can:  
 * Delete color palettes  
 * Create own color palettes  
 * View a certain palette  
@@ -15,7 +15,7 @@ Actions:
 
 
 ### New Palette Form
-Actions:
+Here you can:
 * Create own color using Color Picker
 * Re-order Colors By Drag&Drop
 * Get Random Colors
@@ -27,7 +27,7 @@ Actions:
 > Also there are bunch of Validations here: color value, color name, max number of colors, palette name.
 
 ### Certain Palette
-Actions:
+Here you can:
 * Copy colors to clipboard
 * Chenge color format (HEX, RGB, RGBA)
 * Change Lightness(shades) of Color 
@@ -36,7 +36,7 @@ Actions:
 ![](colors-app/images/CertainPalette.jpg)
 
 ### Certain Color Shades
-Actions:
+Here you can:
 * Copy colors to clipboard
 * Chenge color format (HEX, RGB, RGBA)
 
