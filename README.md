@@ -6,6 +6,8 @@ Nice and responsive
 
 ### Main page
 
+![](colors-app/images/NewPaletteForm.jpg)
+
 Delete color palettes
 Create own color palettes
 View a certain palette
