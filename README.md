@@ -10,7 +10,7 @@ Here you can:
 * Create own color palettes  
 * View a certain palette  
 
-![](colors-app/images/PalettsList.jpg)
+![](images/PalettsList.jpg)
 
 
 
@@ -22,7 +22,7 @@ Here you can:
 * Delete Colors
 * Save whole palette
 
-![](colors-app/images/NewPaletteForm.jpg)
+![](images/NewPaletteForm.jpg)
 
 > Also there are bunch of Validations here: color value, color name, max number of colors, palette name.
 
@@ -33,14 +33,14 @@ Here you can:
 * Change Lightness(shades) of Color 
 * View all shades of certain color
 
-![](colors-app/images/CertainPalette.jpg)
+![](images/CertainPalette.jpg)
 
 ### Certain Color Shades
 Here you can:
 * Copy colors to clipboard
 * Chenge color format (HEX, RGB, RGBA)
 
-![](colors-app/images/CertainColor.jpg)
+![](images/CertainColor.jpg)
 
 ## Tech Stack & Technologies
  * React
