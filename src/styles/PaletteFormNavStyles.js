@@ -14,7 +14,7 @@ const styles = theme => ({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    height: '64px'
+    height: '64px',
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -24,14 +24,25 @@ const styles = theme => ({
       duration: theme.transitions.duration.enteringScreen,
     }),
   },
+  navTitle: {
+    display: 'flex',
+    flexGrow: '1',
+
+    '& h6': {
+      flexGrow: '1',
+      width: '0',
+      overflow: 'hidden',
+      textOverflow: 'elipsis',
+      whiteSpace: 'nowrap',
+    }
+  },
   menuButton: {
-    marginLeft: 12,
-    marginRight: 20,
   },
   hide: {
     display: 'none',
   },
   navBtns: {
+    display: 'flex',
     marginRight: '1rem',
     '& a': {
       textDecoration: 'none'

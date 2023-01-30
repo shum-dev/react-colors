@@ -1,5 +1,6 @@
 .page {
-  height: 100vh;
+  box-sizing: border-box;
+  min-height: 100dvh;
   position: fixed;
   width: 100%;
   top: 0;

@@ -23,7 +23,7 @@ const styles = theme => ({
     justifyContent: 'flex-end',
   },
   content: {
-    height: 'calc(100vh - 64px)',
+    minHeight: '100dvh',
     flexGrow: 1,
     padding: '0',
     transition: theme.transitions.create('margin', {
@@ -31,6 +31,10 @@ const styles = theme => ({
       duration: theme.transitions.duration.leavingScreen,
     }),
     marginLeft: -drawerWidth,
+
+    '& h4': {
+      fontSize: '1.9rem',
+    }
   },
   contentShift: {
     transition: theme.transitions.create('margin', {

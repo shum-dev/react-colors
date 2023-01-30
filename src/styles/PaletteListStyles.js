@@ -14,7 +14,7 @@ export default {
     backgroundColor: '#fff',
     backgroundImage: `url(${bg})`,
     /* background by SVGBackgrounds.com */
-    height: '100vh',
+    minHeight: '100dvh',
     display: 'flex',
     alignItems: 'flex-start',
     justifyContent: 'center',
@@ -22,7 +22,7 @@ export default {
   },
   container: {
     position: 'relative',
-    height: '100vh',
+    minHeight: '100vh',
     width: '50%',
     display: 'flex',
     alignItems: 'center',
@@ -35,7 +35,7 @@ export default {
       width: '80%'
     },
     [sizes.down('xs')]: {
-      width: '75%'
+      width: '90%'
     }
   },
   nav: {
@@ -44,6 +44,10 @@ export default {
     width: '100%',
     justifyContent: 'space-between',
     alignItems: 'center',
+    '& h1': {
+      margin: '0',
+      fontSize: '1.5rem',
+    },
     '& a': {
       display: 'flex',
       color: '#F7873F',
@@ -56,12 +60,19 @@ export default {
     '&:hover svg': {
       transform: 'scale(1.3)'
     },
+    },
+    [sizes.up('xs')]: {
+      marginTop: '1.5rem',
+    },
+    [sizes.down('xs')]: {
+      width: '90%',
     }
   },
   palettes: {
     top: '70px',
     position: 'absolute',
     boxSizing: 'border-box',
+    paddingBottom: '4rem',
     width: '100%',
     display: 'grid',
     gridTemplateColumns: 'repeat(3, 30%)',

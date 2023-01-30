@@ -132,7 +132,6 @@ class NewPaletteForm extends Component {
             [classes.contentShift]: open,
           })}
         >
-          <div className={classes.drawerHeader} />
           <DraggableColorList
             colors={colors}
             removeColor={this.removeColor}

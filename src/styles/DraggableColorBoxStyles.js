@@ -6,10 +6,9 @@ const styles = {
     width: '20%',
     height: '25%',
     margin: '0 auto',
-    display: 'inline-block',
+    display: 'flex',
     position: 'relative',
     cursor: 'pointer',
-    marginBottom: '-5px',
     '&:hover svg': {
       color: 'white',
     },
@@ -24,6 +23,11 @@ const styles = {
     [sizes.down('sm')]: {
       width: '100%',
       height: '5%'
+    },
+
+    [sizes.up('sm')]: {
+      display: 'inline-block',
+      marginBottom: '-5px',
     }
   },
   boxContent: {
@@ -31,13 +35,18 @@ const styles = {
     width: '100%',
     left: '0',
     bottom: '0',
-    padding: '10px',
+    top: '2px',
     color: props => chroma(props.color).luminance() <= 0.2 ? 'white' : 'rgba(0,0,0,0.7)',
     letterSpacing: '1px',
     textTransform: 'uppercase',
     fontSize: '12px',
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+
+    [sizes.up('sm')]: {
+      top: '0',
+      padding: '10px',
+    },
   },
   deleteIcon: {
     color: 'rgba(0,0,0,0.5)',
